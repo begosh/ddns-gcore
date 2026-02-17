@@ -1,6 +1,6 @@
 services:
   gcore-ddns:
-    build: .
+    image: ghcr.io/begosh/ddns-gcore:main
     container_name: gcore-ddns
     restart: unless-stopped
     volumes:
