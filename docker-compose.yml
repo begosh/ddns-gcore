@@ -1,0 +1,9 @@
+services:
+  gcore-ddns:
+    build: .
+    container_name: gcore-ddns
+    restart: unless-stopped
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    environment:
+      - GCORE_CONFIG_PATH=/app/config.yaml

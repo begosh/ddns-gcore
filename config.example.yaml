@@ -1,0 +1,16 @@
+# Gcore API Key (Wrap in quotes if it contains special characters like $)
+gcore_api_key: "YOUR_GCORE_API_KEY_HERE"
+
+# How often to check for IP changes (in minutes)
+interval_minutes: 5
+
+# List of DNS records to keep updated
+records:
+  - zone: "example.com"
+    name: "*"         # Use * for wildcard subdomains
+    type: "A"         # Record type (default A)
+    ttl: 300          # Time To Live in seconds
+  # - zone: "example.com"
+  #   name: "@"         # Use @ for the root domain
+  #   type: "A"
+  #   ttl: 300
