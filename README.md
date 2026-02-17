@@ -51,6 +51,16 @@ python gcore_ddns.py
 
 ### Docker
 
+#### Using GitHub Container Registry (Recommended)
+You can use the pre-built image directly:
+```bash
+docker run -d \
+  --name gcore-ddns \
+  -v $(pwd)/config.yaml:/app/config.yaml:ro \
+  ghcr.io/begosh/ddns-gcore:main
+```
+
+#### Build locally
 1. Build the image:
    ```bash
    docker build -t gcore-ddns .
